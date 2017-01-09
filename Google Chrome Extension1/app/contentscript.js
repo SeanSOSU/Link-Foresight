@@ -16,14 +16,23 @@ function getInfo(link) {
 }
 
 function showInfo(message) {
-    console.log(message);
     var bubbleX, bubbleY;
 
     bubbleX = positionX();
     bubbleY = positionY();
 
     if (message.Success) {
-        bubbleElement.innerHTML = message.Title;
+        if (message.linkType == "youtube") {
+            var likeCount = parseInt(message.data.items[0].statistics.likeCount);
+            var dislikeCount = parseInt(message.data.items[0].statistics.dislikeCount);
+            var ratio = Math.floor(100 * likeCount / (likeCount + dislikeCount));
+
+            bubbleElement.innerHTML = message.data.items[0].snippet.title + '<br>' +
+                'Views: ' + message.data.items[0].statistics.viewCount + '<br>' +
+                'Likes/Dislikes: ' + likeCount + '/' + dislikeCount + ' (' + ratio + '%)';
+        } else {
+            bubbleElement.innerHTML = message.Title;
+        }
     } else {
         bubbleElement.innerHTML = "No information retrieved.";
     }

@@ -6,15 +6,16 @@
   "version": "1.0",
 
   "permissions": [
-    "https://*/"
+    "https://*/",
+    "identity"
   ],
   "browser_action": {
-    "default_icon": "img/icon.png",
+    "default_icon": "img/LF.png",
     "default_popup": "popup.html"
   },
 
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["jquery-3.1.1.min.js", "background.js"]
   },
 
   "content_scripts": [
