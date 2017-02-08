@@ -6,5 +6,5 @@ Install this extension if you want to get an idea of what you're clicking on bef
 
 # Preview #
 
-http://imgur.com/a/dBUWP
+![Imgur](http://i.imgur.com/7rtmEBa.png?1)
 
