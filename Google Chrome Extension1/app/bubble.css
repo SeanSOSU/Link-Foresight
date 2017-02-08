@@ -48,4 +48,45 @@
   /* reduce the damage in FF3.0 */
   display:block;
   width:0;
+} 
+
+.standard-border {
+  color: #AACCFF;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0px;
+  visibility:hidden;
+  width: 40%;
+  height: 80px;
+  line-height: 20px;
+  padding: 15px;
+  background-color: #222233;
+  border: 5px solid #222233;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 4px #888;
+  -moz-box-shadow: 2px 2px 4px #888;
+  box-shadow: 2px 2px 4px #888;
+  z-index: 999;
+}
+
+.title-content {
+  font-size: 16px;
+}
+
+.line-hr {
+  width: 85%;
+  border-color: #AACCFF;
+  display: inline-block;
+}
+
+.left-content {
+  display: inline-block;
+  width: 50%;
+}
+
+.right-content {
+  display:inline-block;
+  width: 50%;
 }
